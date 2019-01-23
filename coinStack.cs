@@ -24,18 +24,18 @@ using System.Linq;
 
 
 class Solution
-{
+{ 
     static void Main(string[] args)
     {
         int[] coinTypes = {10, 15, 55};   
-        bool[] coinMap = new bool[1000];
+        bool[] coinMap = new bool[1001];
         
-        for (int i = 0; i<1000; i++) {       
+        for (int i = 0; i<=1000; i++) {       
             if(coinTypes.ToList().Any(x => (i==x) || ((i >= x) && coinMap[i-x] == true))) {
-                
                 coinMap[i] = true;
                 Console.WriteLine(i);
             }
         }
     }
 }
+
